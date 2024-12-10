@@ -1,0 +1,11 @@
+version: '2'
+services:
+  octoeverywhere-bambu-connect:
+    image: octoeverywhere/octoeverywhere:latest
+    environment:
+      - ACCESS_CODE=$ACCESS_CODE
+      - SERIAL_NUMBER=$SERIAL_NUMBER
+      - PRINTER_IP=$PRINTER_IP
+    volumes:
+      - ./data:/data
+
