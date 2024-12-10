@@ -6,6 +6,11 @@ services:
       - ACCESS_CODE=$ACCESS_CODE
       - SERIAL_NUMBER=$SERIAL_NUMBER
       - PRINTER_IP=$PRINTER_IP
+      - LAN_ONLY_MODE=${LAN_ONLY_MODE:-true}
+      # ~~~ If connecting with Bambu Cloud Mode ~~~
+      # https://octoeverywhere.com/s/bambu-setup
+      - BAMBU_CLOUD_ACCOUNT_EMAIL=$BAMBU_CLOUD_ACCOUNT_EMAIL
+      - BAMBU_CLOUD_ACCOUNT_PASSWORD=$BAMBU_CLOUD_ACCOUNT_PASSWORD
+      #- BAMBU_CLOUD_REGION=china # Optional, use if your Bambu account is in the China region
     volumes:
       - ./data:/data
-
